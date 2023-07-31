@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="estilo.ccs">
+    <title>Documento sin título</title>
+<style>
+	
+	*{
+		box-sizing:border-box;
+	}
+	header{
+		text-align: center;
+		padding:10px 0;
+		background:#000;
+		color:#fff;
+	}
+	body{
+		background:#fff;
+		color:#000;
+	}
+	body{
+	font-family:'Balsamic Sans';
+	}
+	body{
+		padding:10px 0;
+	}
+	.container{
+		max-width: 700px;
+		margin:auto;
+		padding: 20px;
+	}
+	section{
+		border: 2px solid #5624d0;
+		border-radius: 7px;
+		padding: 10px;
+		margin:10px 0;
+		
+		
+	}
+	label{
+		display: block;
+		padding: 7px;
+		border-radius: 7px;
+		cursor: pointer;
+		border: 1px dashed #ccc;
+		margin-bottom: 3px;
+		
+	}	
+	label:hover{
+		background: #cec0fc;	
+	}
+	button{
+		width: 80%;
+		display: block;
+		margin: auto;
+		padding: 10px;
+		
+		background-color: #76d7c8;
+		border: none;
+		cursor: pointer;
+		border-radius: 20px;
+	}
+	button:hover{
+		background: #000;
+		color: #fff;
+	}
+	h2{
+		text-align: center;
+	}
+	#resultado{
+		font-size: 30px;
+		color: darkred
+	}
+	</style>
+</head>
+<body>
+    <header>
+        <h1>QUIZ GAME</h1>
+        <p>Juego de quimica</p>
+        </header>
+        <div class="container">
+        <section id="p0">
+            <h3>1-¿Cuantos elementos tiene la tabla periodica?</h3>
+            <label>
+                <input type="radio" value="1" name="p0" onclick="repuesta(0,this)">118
+            </label>
+            <label>
+                <input type="radio" value="2" name="p0" onclick="repuesta(0,this)">117
+            </label>
+            <label>
+                <input type="radio" value="3" name="p0" onclick="repuesta(0,this)">119
+            </label>
+            </section>
+            <section id="p1">
+            <h3>2-¿En que se divide la tabla periodica?</h3>
+            <label>
+                <input type="radio" value="1" name="p1" onclick="repuesta(1,this)">Metales,No metales,metales de transicion 
+            </label>
+            <label>
+                <input type="radio" value="2" name="p1" onclick="repuesta(1,this)">Metales,Alcalinos,Gases Nobles
+            </label>
+            <label>
+                <input type="radio" value="3" name="p1" onclick="repuesta(1,this)">Familia "A" y "B"
+            </label>
+            </section>
+            <section id="p2">
+            <h3>3-¿Que elementos pertenece a la Familia de los metales?</h3>
+            <label>
+                <input type="radio" value="1" name="p2" onclick="repuesta(2,this)">Calcio,Hierro y Oro
+            </label>
+            <label>
+                <input type="radio" value="2" name="p2" onclick="repuesta(2,this)">Cobre,Escandio y Paladio
+            </label>
+            <label>
+                <input type="radio" value="3" name="p2" onclick="repuesta(2,this)">Azufre, plata y Oro
+            </label>
+            </section>
+            <section id="p3">
+            <h3>4-¿Quien creo la tabla periodica?</h3>
+            <label>
+                <input type="radio" value="1" name="p3" onclick="repuesta(3,this)">Dmitri Mendeléyev
+            </label>
+            <label>
+                <input type="radio" value="2" name="p3" onclick="repuesta(3,this)">Otto Berg
+            </label>
+            <label>
+                <input type="radio" value="3" name="p3" onclick="repuesta(3,this)">Friedrich Stromeyer
+            </label>
+            </section>
+            <section id="p4">
+            <h3>5-¿El numero atomico del Helio?</h3>
+            <label>
+                <input type="radio" value="1" name="p4" onclick="repuesta(4,this)">6
+            </label>
+            <label>
+                <input type="radio" value="2" name="p4" onclick="repuesta(4,this)">2
+            </label>
+            <label>
+                <input type="radio" value="3" name="p4" onclick="repuesta(4,this)">8
+            </label>
+            </section>
+            <section id="p5">
+            <h3>6-¿Nombre y sigla del siguiente número atómico 85?</h3>
+            <label>
+                <input type="radio" value="1" name="p5" onclick="repuesta(5,this)">astato At
+            </label>
+            <label>
+                <input type="radio" value="2" name="p5" onclick="repuesta(5,this)">bromo Br
+            </label>
+            <label>
+                <input type="radio" value="3" name="p5" onclick="repuesta(5,this)">Calcio Ca
+            </label>
+            </section>
+            <section id="p6">
+            <h3>7-¿Símbolo del magnesio?</h3>
+            <label>
+                <input type="radio" value="1" name="p6" onclick="repuesta(6,this)">Pb
+            </label>
+            <label>
+                <input type="radio" value="2" name="p6" onclick="repuesta(6,this)">Mg
+            </label>
+            <label>
+                <input type="radio" value="3" name="p6" onclick="repuesta(6,this)">Hg
+            </label>
+            </section>
+            <section id="p7">
+            <h3>8-¿Ejemplos de metales de transición?</h3>
+            <label>
+                <input type="radio" value="1" name="p7" onclick="repuesta(7,this)">Rutherfordio
+            </label>
+            <label>
+                <input type="radio" value="2" name="p7" onclick="repuesta(7,this)">Actinio
+            </label>
+            <label>
+                <input type="radio" value="3" name="p7" onclick="repuesta(7,this)">Hierro
+            </label>
+            </section>
+            <button onClick="corregir()">CORREGIR</button>
+            <h2>Cantidad Acertadas: <span id="resultado"></span></h2>
+        </div>
+        <script src="script.js"></script>
+</body>
+</html>
